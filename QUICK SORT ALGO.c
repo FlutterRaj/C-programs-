@@ -7,11 +7,10 @@ int partitaion(int a[ ],int l ,int u);
 int main()
 {
 	int a[100],i,n,l=0;
-	printf("\n Enter a range::");
+	printf("\n Enter a range:: ");
 		scanf("%d",&n);
 		
-		
-		printf("\n Enter %d elements for sorting::",n);
+		printf("\n Enter %d elements for sorting:: ",n);
 		for(i=0;i<n;i++)
 		{
 			scanf("%d",&a[i]);
