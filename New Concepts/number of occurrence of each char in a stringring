@@ -11,20 +11,20 @@ int main(){
     j = strlen(s);
     n=j; 
     
-	printf(" frequency count character in string:\n");
+    printf(" frequency count character in string:\n");
  
-	for(i=0;i<n;i++) {
+    for(i=0;i<n;i++) {
      	count=1;
      	
     	if(s[i]){
- 		  for(j=i+1;j<n;j++) {   
-	    	if(s[i]==s[j]) {
-                count++;
-                s[j]='\0';
+ 	    for(j=i+1;j<n;j++) {   
+	        if(s[i]==s[j]) {
+                    count++;
+                    s[j]='\0';
 	    	}
 	      }  
-	      printf(" '%c' = %d \n",s[i],count);
-       }
+	    printf(" '%c' = %d \n",s[i],count);
+       	  }
 	} 
     return 0;
 }
