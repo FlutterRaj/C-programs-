@@ -1,0 +1,20 @@
+#include<Stdio.h>
+
+void swap(int*,int*);
+int main(){
+	int a,b;
+	
+	printf("Enter two value:: ");
+	scanf("%d %d",&a,&b);
+	
+	swap(&a,&b);
+	
+	printf("After alter the contents two values are= %d %d", a, b);
+	
+}
+
+void swap(int *a,int *b){
+	*a=*a+*b;
+	*b=*a-*b;
+	*a=*a-*b;
+}
