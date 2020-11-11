@@ -1,30 +1,34 @@
 #include<stdio.h>
 #include <string.h>
+#include<dos.h>
  
-int main(){
-    char s[1000];  
-    int  i,j,k,count=0,n;
+int main(int argc, char *argv[]){
+	
+	if(argc > 1){
+		int  i,j,k,count=0,n;
+		char *s = argv[1];
  
-    printf(" Enter  the string : ");
-    gets(s);
+	    j = strlen(s);
+	    n=j; 
+	    
+		printf(" frequency count character in string:\n");
+	 
+		for(i=0;i<n;i++) {
+	     	count=1;
+	     	
+	    	if(s[i]){
+	 		  for(j=i+1;j<n;j++) {   
+		    	if(s[i]==s[j]) {
+	                count++;
+	                s[j]='\0';
+		    	}
+		      }  
+		      printf(" '%c' = %d \n",s[i],count);
+	       }
+		} 
+	    return 0;
+	} else {
+		printf("\n Insufficient input values");
+	}
     
-    j = strlen(s);
-    n=j; 
-    
-    printf(" frequency count character in string:\n");
- 
-    for(i=0;i<n;i++) {
-     	count=1;
-     	
-    	if(s[i]){
- 	    for(j=i+1;j<n;j++) {   
-	        if(s[i]==s[j]) {
-                    count++;
-                    s[j]='\0';
-	    	}
-	      }  
-	    printf(" '%c' = %d \n",s[i],count);
-       	  }
-	} 
-    return 0;
 }
